@@ -42,6 +42,9 @@ StackMachine::Add()
         return false;
     }
     $r = pilha[pc] + pilha[pc - 1];
+
+    Pop();
+    Pop();
     return true;
 }
 
@@ -54,6 +57,9 @@ StackMachine::Sub()
         return false;
     }
     $r = pilha[pc] - pilha[pc - 1];
+
+    Pop();
+    Pop();
     return true;
 }
 
@@ -66,6 +72,9 @@ StackMachine::Mul()
         return false;
     }
     $r = pilha[pc] * pilha[pc - 1];
+
+    Pop();
+    Pop();
     return true;
 }
 
@@ -83,6 +92,9 @@ StackMachine::Div()
         return false;
     }
     $r = pilha[pc] / pilha[pc - 1];
+
+    Pop();
+    Pop();
     return true;
 }
 
@@ -95,6 +107,9 @@ StackMachine::Mod()
         return false;
     }
     $r = pilha[pc] % pilha[pc - 1];
+
+    Pop();
+    Pop();
     return true;
 }
 
@@ -107,6 +122,8 @@ StackMachine::Not()
         return false;
     }
     $r = ~pilha[pc];
+
+    Pop();
     return true;
 }
 
@@ -119,6 +136,9 @@ StackMachine::Or()
         return false;
     }
     $r = pilha[pc] | pilha[pc - 1];
+
+    Pop();
+    Pop();
     return true;
 }
 
@@ -131,13 +151,16 @@ StackMachine::And()
         return false;
     }
     $r = pilha[pc] | pilha[pc - 1];
+
+    Pop();
+    Pop();
     return true;
 }
 
 bool
 StackMachine::Mir()
 {
-    if (pilha.size() < 2)
+    if (pilha.empty())
     {
         failReason = FailReason::MissingArgument;
         return false;
@@ -148,6 +171,8 @@ StackMachine::Mir()
     word = ((word & 0x0F0F) << 4) | ((word & 0xF0F0) >> 4);
     word = ((word & 0x00FF) << 8) | ((word & 0xFF00) >> 8);
     $r = word;
+
+    Pop();
     return true;
 }
 
