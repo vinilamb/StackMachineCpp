@@ -186,7 +186,14 @@ StackMachine::Clear()
 bool
 StackMachine::Out()
 {
-    cout << $r << '\n';
+    if (pilha.empty())
+    {
+        failReason = FailReason::MissingArgument;
+        return false;
+    }
+
+    cout << pilha[pc] << '\n';
+    return true;
 }
 
 void StackMachine::w_m1() { m1 = $r; }
