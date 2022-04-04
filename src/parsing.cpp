@@ -43,19 +43,22 @@ ParseResult ParseLine(Statement* stmt, string programLine)
             i += 2;
         }
         else if (i + 1 < programLine.size()
-                 && programLine[i] == m)
+                 && toupper(programLine[i]) == 'M')
         {
-                if (toupper(programLine[i+1]) == '1')
+                if (programLine[i+1] == '1')
                 {
                     stmt->argument = "M1";
+                    i += 2;
                 }
-                if (toupper(programLine[i+1]) == '2')
+                if (programLine[i+1] == '2')
                 {
                     stmt->argument = "M2";
+                    i += 2;
                 }
-                if (toupper(programLine[i+1]) == '3')
+                if (programLine[i+1] == '3')
                 {
                     stmt->argument = "M3";
+                    i += 2;
                 }
         }
         else
