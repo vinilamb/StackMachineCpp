@@ -1,0 +1,59 @@
+;Metódo babilônico para raiz
+;x_(n+1) = (x_n + S/x_n)/2
+;x_1 = 1
+
+;Iteração 1
+PUSH 1 ;x_n
+PUSH 1 ;x_n, x_n
+PUSH 49 ;x_n, x_n, S
+DIV ;S/x_n
+PUSH $R ;x_n, S/x_n
+ADD ;x_n + S/x_n
+PUSH 2 ;2
+PUSH $R ;2, x_n + S/x_n
+DIV ;(x_n + S/x_n)/2
+
+;Demais iterações
+PUSH $R ;x_n
+PUSH $R ;x_n, x_n
+PUSH 49 ;x_n, x_n, S
+DIV ;S/x_n
+PUSH $R ;x_n, S/x_n
+ADD ;x_n + S/x_n
+PUSH 2 ;2
+PUSH $R ;2, x_n + S/x_n
+DIV ;(x_n + S/x_n)/2
+
+PUSH $R ;x_n
+PUSH $R ;x_n, x_n
+PUSH 49 ;x_n, x_n, S
+DIV ;S/x_n
+PUSH $R ;x_n, S/x_n
+ADD ;x_n + S/x_n
+PUSH 2 ;2
+PUSH $R ;2, x_n + S/x_n
+DIV ;(x_n + S/x_n)/2
+
+PUSH $R ;x_n
+PUSH $R ;x_n, x_n
+PUSH 49 ;x_n, x_n, S
+DIV ;S/x_n
+PUSH $R ;x_n, S/x_n
+ADD ;x_n + S/x_n
+PUSH 2 ;2
+PUSH $R ;2, x_n + S/x_n
+DIV ;(x_n + S/x_n)/2
+
+PUSH $R ;x_n
+PUSH $R ;x_n, x_n
+PUSH 49 ;x_n, x_n, S
+DIV ;S/x_n
+PUSH $R ;x_n, S/x_n
+ADD ;x_n + S/x_n
+PUSH 2 ;2
+PUSH $R ;2, x_n + S/x_n
+DIV ;(x_n + S/x_n)/2
+
+;Resultado
+PUSH $R
+OUT

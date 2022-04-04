@@ -1,0 +1,4 @@
+PUSH -30568
+MIR
+PUSH $R
+OUT
