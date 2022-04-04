@@ -36,12 +36,12 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/Interpreter.h" />
-		<Unit filename="include/Parser.h" />
 		<Unit filename="include/StackMachine.h" />
+		<Unit filename="include/parsing.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Interpreter.cpp" />
-		<Unit filename="src/Parser.cpp" />
 		<Unit filename="src/StackMachine.cpp" />
+		<Unit filename="src/parsing.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
