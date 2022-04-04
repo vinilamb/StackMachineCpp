@@ -4,47 +4,7 @@
 #include <StackMachine.h>
 #include <vector>
 #include <string>
-
-const vector<string> OPERATION_NAMES = {
-    "ADD",
-    "SUB",
-    "MUL",
-    "DIV",
-    "MOD",
-    "NOT",
-    "OR",
-    "AND",
-    "MIR",
-    "CLEAR",
-    "OUT",
-    "PUSH",
-    "POP",
-    "READ",
-    "WRITE",
-};
-
-bool op_is_valid(string opName);
-
-class Statement
-{
-    public:
-        string operation;
-        string argument;
-};
-
-enum class ParseResult
-{
-    OK,
-    Comment,
-    MissingArgument,
-    ExcessArgument,
-    BadArgument,
-    MissingOperation,
-    UnknownOperation,
-    UncommentedJunk,
-};
-
-ParseResult ParseLine(Statement* stmt, string programLine);
+#include "parsing.h"
 
 bool ExecuteStatement(StackMachine* sm, Statement* stmt);
 
