@@ -1,4 +1,5 @@
 #include "StackMachine.h"
+#include "Interpreter.h"
 #include <iostream>
 
 StackMachine::StackMachine()
@@ -207,6 +208,14 @@ StackMachine::Pop_$r()
 
     $r = pilha[pc];
     Pop();
+    return true;
+}
+
+bool
+StackMachine::Jz(int line)
+{
+    if ($r == 0)
+        lineNumber = line - 2;
     return true;
 }
 

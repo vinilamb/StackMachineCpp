@@ -2,12 +2,14 @@
 ;x_(n+1) = (x_n + S/x_n)/2
 ;x_1 = 1
 
-rt = 49
+PUSH 49
+POP
+WRITE m1
 
 ;Iteração 1
 PUSH 1 ;x_n
 PUSH 1 ;x_n, x_n
-PUSH rt ;x_n, x_n, S
+PUSH m1 ;x_n, x_n, S
 DIV ;S/x_n
 PUSH $R ;x_n, S/x_n
 ADD ;x_n + S/x_n
@@ -18,7 +20,7 @@ DIV ;(x_n + S/x_n)/2
 ;Demais iterações
 PUSH $R ;x_n
 PUSH $R ;x_n, x_n
-PUSH rt ;x_n, x_n, S
+PUSH m1 ;x_n, x_n, S
 DIV ;S/x_n
 PUSH $R ;x_n, S/x_n
 ADD ;x_n + S/x_n
@@ -28,7 +30,7 @@ DIV ;(x_n + S/x_n)/2
 
 PUSH $R ;x_n
 PUSH $R ;x_n, x_n
-PUSH rt ;x_n, x_n, S
+PUSH m1 ;x_n, x_n, S
 DIV ;S/x_n
 PUSH $R ;x_n, S/x_n
 ADD ;x_n + S/x_n
@@ -38,7 +40,7 @@ DIV ;(x_n + S/x_n)/2
 
 PUSH $R ;x_n
 PUSH $R ;x_n, x_n
-PUSH rt ;x_n, x_n, S
+PUSH m1 ;x_n, x_n, S
 DIV ;S/x_n
 PUSH $R ;x_n, S/x_n
 ADD ;x_n + S/x_n
@@ -48,7 +50,7 @@ DIV ;(x_n + S/x_n)/2
 
 PUSH $R ;x_n
 PUSH $R ;x_n, x_n
-PUSH rt ;x_n, x_n, S
+PUSH m1 ;x_n, x_n, S
 DIV ;S/x_n
 PUSH $R ;x_n, S/x_n
 ADD ;x_n + S/x_n

@@ -19,8 +19,8 @@ int main(int argc, char *argv[])
 {
     setlocale(LC_ALL, "Portuguese");
     Interpreter it;
-    // it.ExecuteFile("bhaskara.txt");
-    it.ExecuteInteractive();
+    it.ExecuteFile("jump.txt");
+    //it.ExecuteInteractive();
 }
 
 int main2(int argc, char *argv[]){

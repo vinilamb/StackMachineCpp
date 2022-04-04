@@ -23,11 +23,13 @@ class StackMachine {
 
         int pc;     // ínice do topo da pilha
         word_t $r;  // registrador $r que guarda resultado de operações
-
+        int lineNumber;
         // registradores de memória m1-m3
         word_t m1;
         word_t m2;
         word_t m3;
+
+        bool z;
 
         FailReason failReason;
 
@@ -46,6 +48,7 @@ class StackMachine {
         bool Clear();
         bool Out();
         bool Pop_$r();
+        bool Jz(int line);
 
         // memória
         // write - salva r$ no mN equivalente.

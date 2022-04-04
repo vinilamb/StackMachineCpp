@@ -12,7 +12,7 @@ ParseResult ParseLine(Statement* stmt, string programLine)
     int i = 0;
     while (programLine[i] == ' ') i++;
 
-    if (programLine[i] == ';')
+    if (programLine[i] == ';' || programLine.size() == i)
     {
         return ParseResult::Comment;
     }
@@ -91,6 +91,15 @@ ParseResult ParseLine(Statement* stmt, string programLine)
         {
             return ParseResult::BadArgument;
         }
+    }
+    else if (stmt->operation == "JZ")
+    {
+        int argStart = i;
+        while (isalnum(programLine[i])) i++;
+        if (argStart == i)
+            return ParseResult::MissingArgument;
+
+        stmt->argument = programLine.substr(argStart, i - argStart);
     }
 
     while (programLine[i] == ' ') i++;

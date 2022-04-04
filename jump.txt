@@ -1,0 +1,5 @@
+PUSH 5
+OUT
+PUSH 0
+POP
+JZ 2

@@ -8,6 +8,8 @@
 
 bool ExecuteStatement(StackMachine* sm, Statement* stmt);
 
+void changeLineNumber(int ln);
+
 class Interpreter
 {
     public:

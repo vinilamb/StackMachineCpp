@@ -69,7 +69,7 @@
 1649094909 source:c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\src\parsing.cpp
 	"parsing.h"
 
-1649092315 source:c:\stackmachinecpp\main.cpp
+1649097983 source:c:\stackmachinecpp\main.cpp
 	<iostream>
 	<fstream>
 	<vector>
@@ -79,21 +79,33 @@
 	"StackMachine.h"
 	"Interpreter.h"
 
-1649092315 c:\stackmachinecpp\include\stackmachine.h
+1649098779 c:\stackmachinecpp\include\stackmachine.h
 	<vector>
 	<string>
 
-1649093304 c:\stackmachinecpp\include\interpreter.h
+1649097707 c:\stackmachinecpp\include\interpreter.h
 	<StackMachine.h>
 	<vector>
 	<string>
 	"parsing.h"
 
-1649093304 c:\stackmachinecpp\include\parsing.h
+1649097875 c:\stackmachinecpp\include\parsing.h
 	<string>
 	<vector>
 
-1649092315 source:c:\stackmachinecpp\src\stackmachine.cpp
+1649098986 source:c:\stackmachinecpp\src\stackmachine.cpp
 	"StackMachine.h"
+	"Interpreter.h"
 	<iostream>
+
+1649098490 source:c:\stackmachinecpp\src\parsing.cpp
+	"parsing.h"
+
+1649098934 source:c:\stackmachinecpp\src\interpreter.cpp
+	"Interpreter.h"
+	<string>
+	<sstream>
+	<vector>
+	<iostream>
+	<fstream>
 

@@ -10,6 +10,8 @@ using namespace std;
 
 bool op_is_valid(string opName);
 
+vector<string> file;
+
 Interpreter::Interpreter()
 {
     //ctor
@@ -106,6 +108,10 @@ bool ExecuteStatement(StackMachine* sm, Statement* stmt)
         if (stmt->argument == "M2") sm->w_m2();
         if (stmt->argument == "M3") sm->w_m3();
     }
+    else if (stmt->operation == "JZ")
+    {
+        result = sm->Jz(stoi(stmt->argument));
+    }
     return result;
 }
 
@@ -121,9 +127,15 @@ Interpreter::ExecuteFile(string programFileName)
         return;
     }
 
-    int lineNumber = 1;
-    while (getline(fileStream, line))
+    while(getline(fileStream, line))
     {
+        file.push_back(line);
+    }
+
+    sm.lineNumber = 0;
+    while (sm.lineNumber <= file.size())
+    {
+        line = file[sm.lineNumber];
         Statement stmt;
         auto result = ParseLine(&stmt, line);
         if (result == ParseResult::OK)
@@ -131,7 +143,7 @@ Interpreter::ExecuteFile(string programFileName)
             auto execOk = ExecuteStatement(&sm, &stmt);
             if (!execOk)
             {
-                cout << "Erro de execução na linha " << lineNumber << "!\n";
+                cout << "Erro de execução na linha " << sm.lineNumber << "!\n";
                 cout << get_execute_error_msg(&sm) << "\n";
                 return;
             }
@@ -139,11 +151,11 @@ Interpreter::ExecuteFile(string programFileName)
         else if (result != ParseResult::Comment)
         {
             // tratar erro
-            cout << "Erro de sintaxe na linha " << lineNumber << "!\n";
+            cout << "Erro de sintaxe na linha " << sm.lineNumber << "!\n";
             cout << get_parser_error_msg(result, &stmt) << "\n";
             return;
         }
-        lineNumber++;
+        sm.lineNumber++;
     }
 }
 
