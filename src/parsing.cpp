@@ -64,6 +64,10 @@ ParseResult ParseLine(Statement* stmt, string programLine)
         else
         {
             int argStart = i;
+            if (programLine[i] == '-')
+            {
+                i++;
+            }
             while (isdigit(programLine[i])) i++;
             if (opStart == i)
             {

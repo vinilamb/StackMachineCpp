@@ -1,21 +1,33 @@
-A = 6
-B = -16
-C = 8
+;A = 6
+;B = -16
+;C = 8
+
+PUSH 6
+POP
+WRITE M1
+
+PUSH -16
+POP
+WRITE M2
+
+PUSH 8
+POP
+WRITE M3
 
 PUSH 2;
-PUSH a;
+PUSH M1;
 MUL
 PUSH $R
 PUSH 4;		
-PUSH a;		a
-PUSH c;		c
+PUSH M1;		a
+PUSH M3;		c
 MUL;		c*a
 PUSH $R
 MUL;		(c*a)*4
 PUSH $R
 
-PUSH b;		b
-PUSH b;		b
+PUSH M2;		b
+PUSH M2;		b
 MUL;		b^2
 PUSH $R
 
@@ -36,14 +48,14 @@ DIV
 PUSH $R
 
 PUSH 4;		
-PUSH a;		a
-PUSH c;		c
+PUSH M1;		a
+PUSH M3;		c
 MUL;		c*a
 PUSH $R
 MUL;		(c*a)*4
 PUSH $R
-PUSH b;		b
-PUSH b;		b
+PUSH M2;		b
+PUSH M2;		b
 MUL;		b^2
 PUSH $R
 SUB;		(b^2)-(4*a*c)
@@ -60,14 +72,14 @@ PUSH $R
 PUSH $R
 
 PUSH 4;		
-PUSH a;		a
-PUSH c;		c
+PUSH M1;		a
+PUSH M3;		c
 MUL;		c*a
 PUSH $R
 MUL;		(c*a)*4
 PUSH $R
-PUSH b;		b
-PUSH b;		b
+PUSH M2;		b
+PUSH M2;		b
 MUL;		b^2
 PUSH $R
 SUB;		(b^2)-(4*a*c)
@@ -84,14 +96,14 @@ PUSH $R
 PUSH $R
 
 PUSH 4;		
-PUSH a;		a
-PUSH c;		c
+PUSH M1;		a
+PUSH M3;		c
 MUL;		c*a
 PUSH $R
 MUL;		(c*a)*4
 PUSH $R
-PUSH b;		b
-PUSH b;		b
+PUSH M2;		b
+PUSH M2;		b
 MUL;		b^2
 PUSH $R
 SUB;		(b^2)-(4*a*c)
@@ -107,7 +119,7 @@ DIV
 
 PUSH $R
 
-PUSH b;		b
+PUSH M2;		b
 PUSH -1
 MUL;			-b
 PUSH $R
@@ -120,19 +132,19 @@ PUSH $R
 ;//////////////////////////////////////////////////////////////////////////
 
 PUSH 2;
-PUSH a;
+PUSH M1;
 MUL
 PUSH $R
 PUSH 4;		
-PUSH a;		a
-PUSH c;		c
+PUSH M1;		a
+PUSH M3;		c
 MUL;		c*a
 PUSH $R
 MUL;		(c*a)*4
 PUSH $R
 
-PUSH b;		b
-PUSH b;		b
+PUSH M2;		b
+PUSH M2;		b
 MUL;		b^2
 PUSH $R
 
@@ -153,14 +165,14 @@ DIV
 PUSH $R
 
 PUSH 4;		
-PUSH a;		a
-PUSH c;		c
+PUSH M1;		a
+PUSH M3;		c
 MUL;		c*a
 PUSH $R
 MUL;		(c*a)*4
 PUSH $R
-PUSH b;		b
-PUSH b;		b
+PUSH M2;		b
+PUSH M2;		b
 MUL;		b^2
 PUSH $R
 SUB;		(b^2)-(4*a*c)
@@ -177,14 +189,14 @@ PUSH $R
 PUSH $R
 
 PUSH 4;		
-PUSH a;		a
-PUSH c;		c
+PUSH M1;		a
+PUSH M3;		c
 MUL;		c*a
 PUSH $R
 MUL;		(c*a)*4
 PUSH $R
-PUSH b;		b
-PUSH b;		b
+PUSH M2;		b
+PUSH M2;		b
 MUL;		b^2
 PUSH $R
 SUB;		(b^2)-(4*a*c)
@@ -201,14 +213,14 @@ PUSH $R
 PUSH $R
 
 PUSH 4;		
-PUSH a;		a
-PUSH c;		c
+PUSH M1;		a
+PUSH M3;		c
 MUL;		c*a
 PUSH $R
 MUL;		(c*a)*4
 PUSH $R
-PUSH b;		b
-PUSH b;		b
+PUSH M2;		b
+PUSH M2;		b
 MUL;		b^2
 PUSH $R
 SUB;		(b^2)-(4*a*c)
@@ -224,7 +236,7 @@ DIV
 
 PUSH $R
 
-PUSH b;		b
+PUSH M2;		b
 PUSH -1
 MUL;			-b
 PUSH $R

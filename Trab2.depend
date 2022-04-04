@@ -69,7 +69,7 @@
 1649094909 source:c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\src\parsing.cpp
 	"parsing.h"
 
-1649097983 source:c:\stackmachinecpp\main.cpp
+1649099337 source:c:\stackmachinecpp\main.cpp
 	<iostream>
 	<fstream>
 	<vector>
@@ -98,7 +98,7 @@
 	"Interpreter.h"
 	<iostream>
 
-1649098490 source:c:\stackmachinecpp\src\parsing.cpp
+1649099733 source:c:\stackmachinecpp\src\parsing.cpp
 	"parsing.h"
 
 1649098934 source:c:\stackmachinecpp\src\interpreter.cpp
