@@ -1,0 +1,67 @@
+;M1 = X
+;M2 = C
+;M3 = T
+
+;X -> Número sendo testado
+;C -> Contador de número primo atual
+;T -> Número que testa X mod T
+
+;Inicializa X com 2
+PUSH 2
+POP
+WRITE M1
+
+;Inicializa C com 1
+PUSH 1
+POP
+WRITE M2
+
+;If C == n termina o programa, else continua
+PUSH M1
+OUT
+POP
+PUSH M2
+PUSH 25
+SUB
+JZ 67
+
+;(Re)define T como 2
+PUSH 2
+POP
+WRITE M3
+
+;Incrementa X
+PUSH M1
+PUSH 1
+ADD
+WRITE M1
+
+;if X mod T == 0 volta para o passo anterior, else continua a execução
+PUSH M3
+PUSH M1
+MOD
+JZ 29
+
+;Incrementa T
+PUSH M3
+PUSH 1
+ADD
+WRITE M3
+
+;if X - T != volta para o cálculo do módulo, else continua a execução
+PUSH M3
+PUSH M1
+SUB
+JNZ 40
+
+;Incrementa C
+PUSH M2
+PUSH 1
+ADD
+WRITE M2
+
+;Volta para o início do loop
+JMP 20
+
+;Fim do programa
+
