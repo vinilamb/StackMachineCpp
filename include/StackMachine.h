@@ -49,6 +49,9 @@ class StackMachine {
         bool Out();
         bool Pop_$r();
         bool Jz(int line);
+        bool Jnz(int line);
+        bool Jmp(int line);
+
 
         // memória
         // write - salva r$ no mN equivalente.

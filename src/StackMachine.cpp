@@ -219,6 +219,21 @@ StackMachine::Jz(int line)
     return true;
 }
 
+bool
+StackMachine::Jnz(int line)
+{
+    if ($r != 0)
+        lineNumber = line - 2;
+    return true;
+}
+
+bool
+StackMachine::Jmp(int line)
+{
+    lineNumber = line - 2;
+    return true;
+}
+
 void StackMachine::w_m1() { m1 = $r; }
 void StackMachine::w_m2() { m2 = $r; }
 void StackMachine::w_m3() { m3 = $r; }

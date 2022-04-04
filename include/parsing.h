@@ -20,7 +20,9 @@ const std::vector<std::string> OPERATION_NAMES = {
     "POP",
     "READ",
     "WRITE",
-    "JZ"
+    "JZ",
+    "JNZ",
+    "JMP"
 };
 
 class Statement

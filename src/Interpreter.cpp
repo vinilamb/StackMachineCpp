@@ -112,6 +112,14 @@ bool ExecuteStatement(StackMachine* sm, Statement* stmt)
     {
         result = sm->Jz(stoi(stmt->argument));
     }
+    else if (stmt->operation == "JNZ")
+    {
+        result = sm->Jnz(stoi(stmt->argument));
+    }
+    else if (stmt->operation == "JMP")
+    {
+        result = sm->Jmp(stoi(stmt->argument));
+    }
     return result;
 }
 

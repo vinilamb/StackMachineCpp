@@ -105,6 +105,24 @@ ParseResult ParseLine(Statement* stmt, string programLine)
 
         stmt->argument = programLine.substr(argStart, i - argStart);
     }
+    else if (stmt->operation == "JNZ")
+    {
+        int argStart = i;
+        while (isalnum(programLine[i])) i++;
+        if (argStart == i)
+            return ParseResult::MissingArgument;
+
+        stmt->argument = programLine.substr(argStart, i - argStart);
+    }
+    else if (stmt->operation == "JMP")
+    {
+        int argStart = i;
+        while (isalnum(programLine[i])) i++;
+        if (argStart == i)
+            return ParseResult::MissingArgument;
+
+        stmt->argument = programLine.substr(argStart, i - argStart);
+    }
 
     while (programLine[i] == ' ') i++;
     if (i != programLine.size() && programLine[i] != ';')

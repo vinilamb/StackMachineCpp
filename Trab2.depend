@@ -109,3 +109,43 @@
 	<iostream>
 	<fstream>
 
+1649110872 source:c:\users\pires\documents\codeblocks\c++\stackmachinecpp-main\stackmachinecpp-main\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<sstream>
+	<string>
+	<algorithm>
+	"StackMachine.h"
+	"Interpreter.h"
+
+1649108301 c:\users\pires\documents\codeblocks\c++\stackmachinecpp-main\stackmachinecpp-main\include\stackmachine.h
+	<vector>
+	<string>
+
+1649105692 c:\users\pires\documents\codeblocks\c++\stackmachinecpp-main\stackmachinecpp-main\include\interpreter.h
+	<StackMachine.h>
+	<vector>
+	<string>
+	"parsing.h"
+
+1649108641 c:\users\pires\documents\codeblocks\c++\stackmachinecpp-main\stackmachinecpp-main\include\parsing.h
+	<string>
+	<vector>
+
+1649108721 source:c:\users\pires\documents\codeblocks\c++\stackmachinecpp-main\stackmachinecpp-main\src\interpreter.cpp
+	"Interpreter.h"
+	<string>
+	<sstream>
+	<vector>
+	<iostream>
+	<fstream>
+
+1649108553 source:c:\users\pires\documents\codeblocks\c++\stackmachinecpp-main\stackmachinecpp-main\src\parsing.cpp
+	"parsing.h"
+
+1649108301 source:c:\users\pires\documents\codeblocks\c++\stackmachinecpp-main\stackmachinecpp-main\src\stackmachine.cpp
+	"StackMachine.h"
+	"Interpreter.h"
+	<iostream>
+

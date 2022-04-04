@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 {
     setlocale(LC_ALL, "Portuguese");
     Interpreter it;
-    it.ExecuteFile("bhaskaraSym.txt");
+    it.ExecuteFile("primen.txt");
     //it.ExecuteInteractive();
 }
 
