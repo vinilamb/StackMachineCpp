@@ -42,6 +42,22 @@ ParseResult ParseLine(Statement* stmt, string programLine)
             stmt->argument = "$R";
             i += 2;
         }
+        else if (i + 1 < programLine.size()
+                 && programLine[i] == m)
+        {
+                if (toupper(programLine[i+1]) == '1')
+                {
+                    stmt->argument = "M1";
+                }
+                if (toupper(programLine[i+1]) == '2')
+                {
+                    stmt->argument = "M2";
+                }
+                if (toupper(programLine[i+1]) == '3')
+                {
+                    stmt->argument = "M3";
+                }
+        }
         else
         {
             int argStart = i;
