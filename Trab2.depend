@@ -1,0 +1,71 @@
+# depslib dependency file v1.0
+1647635812 source:c:\users\pires\documents\codeblocks\trabii-arqii\trab2\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<sstream>
+	<string>
+	<algorithm>
+
+1647956708 source:c:\users\victf\documents\faculdade\stackmachine\trab2\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<sstream>
+	<string>
+	<algorithm>
+
+1649035375 source:c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<sstream>
+	<string>
+	<algorithm>
+	"StackMachine.h"
+	"Interpreter.h"
+
+1649019641 source:c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\stackmachine.cpp
+	"StackMachine.h"
+	<iostream>
+
+1649016538 c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\stackmachine.h
+	<vector>
+	<string>
+
+1649035723 c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\include\stackmachine.h
+	<vector>
+	<string>
+
+1649093782 source:c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\src\stackmachine.cpp
+	"StackMachine.h"
+	<iostream>
+
+1649093188 source:c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\src\interpreter.cpp
+	"Interpreter.h"
+	<string>
+	<sstream>
+	<vector>
+	<iostream>
+	<fstream>
+
+1649093043 c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\include\interpreter.h
+	<StackMachine.h>
+	<vector>
+	<string>
+	"parsing.h"
+
+1649024485 source:c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\src\parser.cpp
+	"Parser.h"
+
+1649024987 c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\include\parser.h
+	<string>
+	<StackMachine.h>
+
+1649093159 c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\include\parsing.h
+	<string>
+	<vector>
+
+1649093698 source:c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\src\parsing.cpp
+	"parsing.h"
+
