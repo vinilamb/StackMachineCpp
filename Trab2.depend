@@ -33,7 +33,7 @@
 	<vector>
 	<string>
 
-1649035723 c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\include\stackmachine.h
+1649095431 c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\include\stackmachine.h
 	<vector>
 	<string>
 
@@ -41,7 +41,7 @@
 	"StackMachine.h"
 	<iostream>
 
-1649094658 source:c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\src\interpreter.cpp
+1649095545 source:c:\users\vinicius.magalhes\desktop\arquitetura e organização de computadores ii\trabalhos\trab2\src\interpreter.cpp
 	"Interpreter.h"
 	<string>
 	<sstream>

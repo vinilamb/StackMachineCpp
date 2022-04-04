@@ -45,6 +45,7 @@ class StackMachine {
         bool Mir();
         bool Clear();
         bool Out();
+        bool Pop_$r();
 
         // memória
         // write - salva r$ no mN equivalente.

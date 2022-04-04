@@ -90,7 +90,7 @@ bool ExecuteStatement(StackMachine* sm, Statement* stmt)
     }
     else if (stmt->operation == "POP")
     {
-        result = sm->Pop();
+        result = sm->Pop_$r();
     }
     else if (stmt->operation == "READ")
     {

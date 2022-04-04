@@ -196,6 +196,20 @@ StackMachine::Out()
     return true;
 }
 
+bool
+StackMachine::Pop_$r()
+{
+    if (pilha.empty())
+    {
+        failReason = FailReason::MissingArgument;
+        return false;
+    }
+
+    $r = pilha[pc];
+    Pop();
+    return true;
+}
+
 void StackMachine::w_m1() { m1 = $r; }
 void StackMachine::w_m2() { m2 = $r; }
 void StackMachine::w_m3() { m3 = $r; }
