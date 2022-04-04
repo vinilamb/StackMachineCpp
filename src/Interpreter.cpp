@@ -70,6 +70,18 @@ bool ExecuteStatement(StackMachine* sm, Statement* stmt)
         {
             dado = sm->$r;
         }
+        else if (stmt->argument == "M1")
+        {
+            dado = sm->m1;
+        }
+        else if (stmt->argument == "M2")
+        {
+            dado = sm->m2;
+        }
+        else if (stmt->argument == "M3")
+        {
+            dado = sm->m3;
+        }
         else
         {
             dado = stoi(stmt->argument);
