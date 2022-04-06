@@ -1,0 +1,77 @@
+;M1 eh o n-1
+;M2 eh o n-2
+;M3 eh o contador(fibonacci a ser calculado) = 8, valor resultado 21
+
+;adiciona 1 ao contador(pois é comparacao com 0) e instancia na M3 
+PUSH 1   
+PUSH 8    
+ADD  
+WRITE M3  
+     
+;fib(0) caso base 1, instancia na memoria M1
+PUSH 0   
+POP    
+WRITE M1 
+
+;verifica se o contador nao pede um dos valores bases
+;decresce contador e pula pro final caso for 0(significando que resultado esta no M1)
+PUSH 1   
+PUSH M3
+SUB     
+WRITE M3 
+JZ 74    
+;;elimina o contador da pilha
+
+;atribui o valor de M1 para M2
+PUSH M1 
+POP    
+WRITE M2 
+
+;fib(1) caso base 2, instancia na memoria M1
+PUSH 1     
+POP
+WRITE M1 
+
+;agora os dois valores bases estao adicionados na memoria
+
+;verifica se o contador nao pede um dos valores bases
+;decresce contador e pula pro final caso for 0(significando que resultado esta no M1)
+PUSH 1  
+PUSH M3
+SUB     
+WRITE M3
+JZ 74     
+
+;agora funciona o processo genérico
+;adiciona n-1 e n-2, faz a soma, atribui n-1 pra n-2, e a soma pra n-1
+PUSH M1
+PUSH M2
+ADD
+PUSH $R 
+
+; n-2 recebe n-1
+PUSH M1
+POP
+WRITE M2
+
+; n-1 recebe n
+POP
+WRITE M1
+
+;verifica se o o contador escolheu esse fib, caso contrario so decresce e refaz
+PUSH 1
+PUSH M3
+SUB     
+PUSH $R
+WRITE M3
+POP
+JZ 74 
+JMP 47
+; pula pra linha "AGORA FUNCIONA PROCESSO GENÉRICO" onde faz o generico
+
+;FINAL
+;o valor correto deve estar em M1
+PUSH M1
+OUT
+
+;Fim do programa
